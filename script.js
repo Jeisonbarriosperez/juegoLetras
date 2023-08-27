@@ -7,7 +7,42 @@ const finalMessage = document.getElementById('final-message');
 
 const figureParts = document.querySelectorAll(".figure-part");
 
-const words = ['perro', 'gato', 'elefante', 'cebra', 'rana', 'león', 'tigre', 'conejo', 'jirafa', 'hipopótamo', 'tortuga', 'oso', 'camello', 'mono', 'koala', 'panda', 'puercoespín', 'ardilla', 'castor', 'búho', 'águila', 'colibrí', 'buitre', 'murciélago', 'canguro', 'delfín', 'ballena', 'orca', 'foca', 'morsa', 'pingüino', 'lobo', 'zorro', 'mapache', 'puma', 'rinoceronte', 'halcón', 'cóndor', 'águila calva', 'tiburón', 'cocodrilo', 'serpiente', 'tucán', 'pelícano', 'ganso', 'cisne', 'pato', 'paloma', 'bisonte', 'jaguar', 'leopardo', 'ocelote', 'pantera', 'guepardo', 'hiena', 'suricata', 'pez espada', 'calamar', 'medusa', 'erizo de mar', 'estrella de mar', 'pulpo', 'caracol', 'lagarto', 'iguana', 'rana toro', 'trucha', 'salmon', 'barracuda', 'lucio', 'luciérnaga', 'ciempiés', 'mariposa', 'polilla', 'mariquita', 'libélula', 'abeja', 'hormiga', 'gusano', 'saltamontes', 'grillo', 'langosta', 'cangrejo', 'alacrán', 'tarántula', 'oruga', 'escarabajo', 'avispa', 'cucaracha', 'mosquito', 'pulga', 'garrapata', 'salamandra', 'anguila', 'hippocampo', 'cabra', 'vaca', 'cerdito', 'gallina', 'gallo', 'oveja', 'caballo', 'ratón', 'aguacate', 'papa', 'tomate', 'lechuga', 'fresa', 'naranja', 'piña', 'manzana', 'melón', 'sandía', 'plátano', 'uva', 'mango', 'cereza', 'ciruela', 'durazno', 'limón', 'nuez', 'pistacho', 'almendra', 'cacahuete', 'puerro', 'cebolla', 'ajo', 'brócoli', 'zanahoria', 'espinacas', 'repollo', 'coliflor', 'pimiento', 'maíz', 'guisantes', 'garbanzos', 'lentejas', 'frijoles', 'arroz', 'espagueti', 'hamburguesa', 'pizza', 'sándwich', 'taco', 'ensalada', 'sopa', 'huevo', 'queso', 'leche', 'mantequilla', 'yogur', 'crema', 'helado', , 'un', 'uno', 'pais', 'futbol', 'programacion', 'ingenieria', 'leon', 'felicidad', 'amor', 'mundo', 'noche', 'dia', 'Corresponsabilizacion', 'jeison', 'desoxirribonucleico', 'esternocleidomastoideo', 'amor', 'fantasma', 'esgrima', 'parásito', 'evolución', 'chimenea', 'hipopótamo', 'albahaca', 'reproducir', 'parásito', 'telescopio', 'cascarrabias', 'flamenco', 'sacrificio', 'algoritmo', 'enciclopedia', 'abominable', 'vegetación', 'luminiscencia', 'comunismo', 'castañuela', 'arcoíris', 'cinematográfico', 'maravillosa', 'hipopótamo', 'perpendicular', 'cataclismo', 'tergiversar', 'colaborativo', 'espectáculo', 'caricatura', 'estereotipo', 'perspectiva', 'desesperanza', 'tergiversar', 'magnífico', 'fotográfico', 'puntualidad', 'reivindicar', 'descomunal', 'estadístico', 'comunicación', 'transatlántico', 'microorganismo',];
+const words = ['perro', 'gato', 'elefante', 'cebra', 'rana', 'león', 'tigre',
+    'conejo', 'jirafa', 'hipopótamo', 'tortuga', 'oso', 'camello', 'mono', 'koala',
+    'panda', 'puercoespín', 'ardilla', 'castor', 'búho', 'águila', 'colibrí',
+    'buitre', 'murciélago', 'canguro', 'delfín', 'ballena', 'orca', 'foca',
+    'morsa', 'pingüino', 'lobo', 'zorro', 'mapache', 'puma', 'rinoceronte',
+    'halcón', 'cóndor', 'águila calva', 'tiburón', 'cocodrilo', 'serpiente',
+    'tucán', 'pelícano', 'ganso', 'cisne', 'pato', 'paloma', 'bisonte',
+    'jaguar', 'leopardo', 'ocelote', 'pantera', 'guepardo', 'hiena',
+    'suricata', 'pez espada', 'calamar', 'medusa', 'erizo de mar',
+    'estrella de mar', 'pulpo', 'caracol', 'lagarto', 'iguana', 'rana toro',
+    'trucha', 'salmon', 'barracuda', 'lucio', 'luciérnaga', 'ciempiés',
+    'mariposa', 'polilla', 'mariquita', 'libélula', 'abeja', 'hormiga',
+    'gusano', 'saltamontes', 'grillo', 'langosta', 'cangrejo', 'alacrán',
+    'tarántula', 'oruga', 'escarabajo', 'avispa', 'cucaracha', 'mosquito',
+    'pulga', 'garrapata', 'salamandra', 'anguila', 'hippocampo', 'cabra',
+    'vaca', 'cerdito', 'gallina', 'gallo', 'oveja', 'caballo', 'ratón',
+    'aguacate', 'papa', 'tomate', 'lechuga', 'fresa', 'naranja', 'piña',
+    'manzana', 'melón', 'sandía', 'plátano', 'uva', 'mango', 'cereza',
+    'ciruela', 'durazno', 'limón', 'nuez', 'pistacho', 'almendra',
+    'cacahuete', 'puerro', 'cebolla', 'ajo', 'brócoli', 'zanahoria',
+    'espinacas', 'repollo', 'coliflor', 'pimiento', 'maíz', 'guisantes',
+    'garbanzos', 'lentejas', 'frijoles', 'arroz', 'espagueti', 'hamburguesa',
+    'pizza', 'sándwich', 'taco', 'ensalada', 'sopa', 'huevo', 'queso', 'leche',
+    'mantequilla', 'yogur', 'crema', 'helado', , 'un', 'uno', 'pais', 'futbol',
+    'programacion', 'ingenieria', 'leon', 'felicidad', 'amor', 'mundo', 'noche',
+    'dia', 'Corresponsabilizacion', 'jeison', 'desoxirribonucleico',
+    'esternocleidomastoideo', 'amor', 'fantasma', 'esgrima', 'parásito',
+    'evolución', 'chimenea', 'hipopótamo', 'albahaca', 'reproducir',
+    'parásito', 'telescopio', 'cascarrabias', 'flamenco', 'sacrificio',
+    'algoritmo', 'enciclopedia', 'abominable', 'vegetación', 'luminiscencia',
+    'comunismo', 'castañuela', 'arcoíris', 'cinematográfico', 'maravillosa',
+    'hipopótamo', 'perpendicular', 'cataclismo', 'tergiversar', 'colaborativo',
+    'espectáculo', 'caricatura', 'estereotipo', 'perspectiva', 'desesperanza',
+    'tergiversar', 'magnífico', 'fotográfico', 'puntualidad', 'reivindicar',
+    'descomunal', 'estadístico', 'comunicación', 'transatlántico', 'microorganismo',];
+
 
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
@@ -59,7 +94,7 @@ function updateWrongLetterE1() {
 
     //Check if lost
     if (wrongLetters.length === figureParts.length) {
-        finalMessage.innerText =' 😱 Lamentablemente perdiste.😕';
+        finalMessage.innerText = ' 😱 Lamentablemente perdiste.😕';
         popup.style.display = 'flex';
     }
 }
